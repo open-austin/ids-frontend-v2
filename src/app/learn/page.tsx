@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function Learn() {
   return (
       <main >
-       <h1> Home </h1>
+       <h1> Learn </h1>
       </main>
   )
 }
