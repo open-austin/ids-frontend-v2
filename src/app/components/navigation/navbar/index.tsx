@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import Link from 'next/link'
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
 
 const Navbar = () => {
   return (
@@ -17,7 +17,7 @@ const Navbar = () => {
         <Link href="/data">
           <Button color="inherit">Data</Button>
         </Link>
-      <Link href="/story">
+        <Link href="/story">
           <Button color="inherit">Story</Button>
         </Link>
         <Link href="/tech">
@@ -26,9 +26,9 @@ const Navbar = () => {
         <Link href="/learn">
           <Button color="inherit">Learn</Button>
         </Link>
-    </Toolbar>
+      </Toolbar>
     </AppBar>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
