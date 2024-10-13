@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import { Splash } from './components/section/splash'
 
 export default function Home() {
   return (
     <main>
-      <h1> Home </h1>
+      <Splash />
     </main>
   )
 }
