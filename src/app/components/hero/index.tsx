@@ -1,30 +1,30 @@
-// components/Hero.tsx
-import React from 'react'
-import { Box, Typography, Container } from '@mui/material'
+import * as React from 'react';
+import { Stack, Typography, Container, Divider } from '@mui/material';
 
 interface HeroProps {
-  imageUrl: string
-  title: string
-  subtitle?: string
+  imageUrl: string;
+  title: string;
+  subtitle?: string;
+  children?: React.ReactNode;
 }
 
-const Hero: React.FC<HeroProps> = ({ imageUrl, title, subtitle }) => {
+const Hero: React.FC<HeroProps> = ({ imageUrl, title, subtitle, children }) => {
   return (
-    <Box
+    <Stack
       sx={{
         height: '500px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative',
         color: 'white',
       }}
+      // Using Stack properties to control layout
+      alignItems="center"
+      justifyContent="center"
     >
       {/* Overlay */}
-      <Box
+      <Stack
         sx={{
           position: 'absolute',
           top: 0,
@@ -35,6 +35,7 @@ const Hero: React.FC<HeroProps> = ({ imageUrl, title, subtitle }) => {
           zIndex: 1,
         }}
       />
+
       <Container
         sx={{
           position: 'relative',
@@ -50,9 +51,20 @@ const Hero: React.FC<HeroProps> = ({ imageUrl, title, subtitle }) => {
             {subtitle}
           </Typography>
         )}
+        {children && (
+          <Stack
+            direction="row"
+            spacing={2}
+            divider={<Divider orientation="vertical" flexItem />}
+            mt={3}
+            justifyContent="center"
+          >
+            {children}
+          </Stack>
+        )}
       </Container>
-    </Box>
-  )
-}
+    </Stack>
+  );
+};
 
-export default Hero
+export default Hero;
