@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <main>
       <Hero
-        imageUrl="https://example.com/your-image.jpg"
+       imageUrl="/images/primary-personinjail.jpg"
         title="Texas Defense Data"
         subtitle="The only site for publicly available indigent defense data"
       >
-        <Box sx={{ padding: 2 }}>
+        <Box sx={{ padding: 2}}>
           <Typography variant="subtitle1">Label 1</Typography>
         </Box>
         <Box sx={{ padding: 2 }}>
