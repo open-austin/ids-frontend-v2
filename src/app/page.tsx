@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Hero from '@/app/components/hero';
-import { Box, Typography, Button, Divider } from '@mui/material';
+import { Box, Typography, Button} from '@mui/material';
 
 export default function Home() {
   return (
