@@ -22,14 +22,9 @@ const Hero: React.FC<HeroProps> = ({ imageUrl, title, subtitle, children }) => {
       alignItems="center"
       justifyContent="center"
     >
-      {/* Overlay */}
-      
-    
-
       <Container
         sx={{
           position: 'relative',
-          zIndex: 2,
           textAlign: 'center',
         }}
       >
