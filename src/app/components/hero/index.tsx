@@ -13,28 +13,18 @@ const Hero: React.FC<HeroProps> = ({ imageUrl, title, subtitle, children }) => {
     <Stack
       sx={{
         height: '500px',
-        backgroundImage: `url(${imageUrl})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${imageUrl})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative',
-        color: 'white',
       }}
       // Using Stack properties to control layout
       alignItems="center"
       justifyContent="center"
     >
       {/* Overlay */}
-      <Stack
-        sx={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          zIndex: 1,
-        }}
-      />
+      
+    
 
       <Container
         sx={{
