@@ -22,12 +22,12 @@ const Hero: React.FC<HeroProps> = ({ imageUrl, title, subtitle, children }) => {
       alignItems="center"
       justifyContent="center"
     >
-      <Container
+      {/* <Container
         sx={{
           position: 'relative',
           textAlign: 'center',
         }}
-      >
+      > */}
         <Typography variant="h2" component="h1" fontWeight="bold">
           {title}
         </Typography>
@@ -47,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({ imageUrl, title, subtitle, children }) => {
             {children}
           </Stack>
         )}
-      </Container>
+      {/* </Container> */}
     </Stack>
   );
 };
