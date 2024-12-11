@@ -2,6 +2,7 @@
 import type { Metadata } from 'next'
 import Navbar from './components/navigation/navbar'
 import './globals.css' // Import your global styles
+import { ThemeProvider } from '@mui/material'
 
 export const metadata: Metadata = {
   title: 'Texas Defense Data',
@@ -16,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
+        <ThemeProvider theme={{}}>
+          <Navbar />
+        </ThemeProvider>
         {children}
       </body>
     </html>
