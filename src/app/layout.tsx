@@ -1,7 +1,14 @@
 // app/layout.tsx
-import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import type { Metadata } from 'next/types'
 import Navbar from './components/navigation/navbar'
-import './globals.css' // Import your global styles
+import './globals.css'
+
+// Initialize the Inter font with Latin subset
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Texas Defense Data',
@@ -14,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <body>
         <Navbar />
         {children}
